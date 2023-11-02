@@ -1,0 +1,52 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon";
+
+const features = [
+  {
+    title: "Diseño Web",
+    description:
+      "Construimos tu web con el framework que mejor se adapte a tus necesidades. Tu eliges el framework, nosotros lo hacemos realidad. Desde Wordpress hasta NextJS, pasando por Gatsby, Svelte, Astro, etc.",
+    icon: "bx:bxs-briefcase",
+  },
+  {
+    title: "SEO",
+    description:
+      "Realizmos todo el proceso para que tu web se posicione y genere negocio, desde la elección del dominio, hasta la búsqueda de las palabras clave, pasando por la auditoria y optimización de la web.",
+    icon: "bx:bxs-window-alt",
+  },
+
+  {
+    title: "SEM",
+    description:
+      "Aplicamos las mejores metodologias SEM a tu negocio para que tu inversión sea rentable. Te ayudamos a elegir las mejores palabras clave y a optimizar tus campañas.",
+    icon: "bx:bxs-bot",
+  },
+ 
+];
+---
+
+<div class="mt-16 md:mt-0">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+   Toda Empresa Necesita una Web
+  </h2>
+  <p class="text-lg mt-4 text-slate-600">
+    Aplicamos las mejores tecnologías para su desarrollo y mantenimiento. 
+  </p>
+</div>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+  {
+    features.map((item) => (
+      <div class="flex gap-4 items-start">
+        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+          <Icon class="text-white" name={item.icon} />
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+        </div>
+      </div>
+    ))
+  }
+</div>
